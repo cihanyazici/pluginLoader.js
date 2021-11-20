@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="jquery.pluginloader.js"></script>
+</head>
+<body data-sample>
+    <script>
+        $(document).ready(function(){
+
+            $.pluginLoader( 'add', {
+               trigger :"data-sample",
+               path : "js/sample.js",
+               loadFn : function(){
+                   alert("plugin yüklendi")
+               },
+               loadCss :["css/a.css","css/b.css"]
+           } );
+
+        })
+    </script>
+    
+</body>
+</html>
